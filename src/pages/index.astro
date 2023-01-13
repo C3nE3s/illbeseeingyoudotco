@@ -39,6 +39,8 @@ import '@fontsource/petit-formal-script';
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		max-width: 500px;
+		margin: 0 auto;
 	}
 
 	svg {
@@ -49,15 +51,33 @@ import '@fontsource/petit-formal-script';
 		font-family: var(--script);
 		text-align: center;
 		color: var(--pink);
-		font-size: calc(36px + (96 - 36) * ((70vw - 400px) / (1400 - 400)));
+		font-size: max(1.5rem,(1.25rem + 3vw));
 		margin: 0;
+
+	}
+	
+	@media (max-width: 445px) {
+		h1 {
+			font-size: 1.45rem;
+		}
 	}
 
+	@media (max-width: 325px) {
+		h1 {
+			font-size: 1.25rem;
+		}
+	}
+
+	@media (max-width: 260px) {
+		h1 {
+			font-size: 1.1rem;
+		}
+	}
 	h3 {
 		font-family: var(--script);
 		text-align: center;
 		color: var(--light);
-		font-size: calc(28px + (72 - 28) * ((70vw - 400px) / (1400 - 400)));
+		font-size: calc(28px + (72 - 28) * ((500 - 400px) / (500 - 400)));
 		margin: 0;
 		margin-top: 4rem
 	}
