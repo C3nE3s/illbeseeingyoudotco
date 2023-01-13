@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.12.1",
-    "@fontsource/courgette": "^4.5.9",
     "@fontsource/petit-formal-script": "^4.5.11",
     "astro": "^1.9.0"
   }
