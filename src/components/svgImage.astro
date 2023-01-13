@@ -1,0 +1,13 @@
+---
+const images = ["ibsy_jesus", "last_supper", "communion" ] as const
+type SVGImages = typeof images[number]
+
+export interface Props {
+  svg: SVGImages;
+}
+
+const { svg } = Astro.props as Props;
+const { default: innerHTML } = await import(`/${svg}.svg?raw`);
+---
+
+<Fragment set:html={innerHTML} />
